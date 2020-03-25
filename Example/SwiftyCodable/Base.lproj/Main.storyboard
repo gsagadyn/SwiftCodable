@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="SwiftyCodable_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d56-eW-24j" userLabel="Input Text View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="311.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">{
+    "items": [
+        {
+            "field": "test 1"
+        },
+        {
+            "field": "test 2"
+        },
+        {
+            "field": 3
+        },
+        {
+            "field": "test 4"
+        }
+    ]
+}</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPl-7o-5OX" userLabel="Action Button">
+                                <rect key="frame" x="0.0" y="311.5" width="375" height="44"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="oy2-fI-Jeg"/>
+                                </constraints>
+                                <state key="normal" title="⬇️ DECODE ⬇️">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="decodeAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="JdI-lS-zlX"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2Ty-hB-mWr">
+                                <rect key="frame" x="0.0" y="355.5" width="375" height="311.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2Ty-hB-mWr" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="ERB-z5-o3X"/>
+                            <constraint firstAttribute="trailing" secondItem="2Ty-hB-mWr" secondAttribute="trailing" id="KO0-am-UXB"/>
+                            <constraint firstItem="HPl-7o-5OX" firstAttribute="top" secondItem="d56-eW-24j" secondAttribute="bottom" id="LWR-Ze-I4c"/>
+                            <constraint firstAttribute="trailing" secondItem="d56-eW-24j" secondAttribute="trailing" id="Tk4-Cd-U3G"/>
+                            <constraint firstItem="d56-eW-24j" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="TvT-Ts-ThY"/>
+                            <constraint firstItem="d56-eW-24j" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="XVM-Fq-T66"/>
+                            <constraint firstItem="HPl-7o-5OX" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="aUG-GL-vR3"/>
+                            <constraint firstItem="HPl-7o-5OX" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="fpk-b2-eRR"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="2Ty-hB-mWr" secondAttribute="bottom" id="gln-nG-4DK"/>
+                            <constraint firstAttribute="trailing" secondItem="HPl-7o-5OX" secondAttribute="trailing" id="r4y-a7-w3T"/>
+                            <constraint firstItem="2Ty-hB-mWr" firstAttribute="top" secondItem="HPl-7o-5OX" secondAttribute="bottom" id="x4E-vT-iet"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="inputTextView" destination="d56-eW-24j" id="8qw-eL-eAf"/>
+                        <outlet property="outputTextView" destination="2Ty-hB-mWr" id="uUM-ny-duN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="134"/>
+        </scene>
+    </scenes>
+</document>

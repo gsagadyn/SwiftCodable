@@ -1,0 +1,16 @@
+PODS:
+  - SwiftyCodable (1.0.0)
+
+DEPENDENCIES:
+  - SwiftyCodable (from `../`)
+
+EXTERNAL SOURCES:
+  SwiftyCodable:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SwiftyCodable: 3d31e5ca7b176afe81d8e54def9b2009dbc6fbef
+
+PODFILE CHECKSUM: 8814246b6d08bd7108c28e8d84885911e766c648
+
+COCOAPODS: 1.9.1
