@@ -11,6 +11,6 @@ let package = Package(
         .library(name: "SwiftyCodable", targets: ["SwiftyCodable"])
     ],
     targets: [
-        .target(name: "SwiftyCodable", dependencies: [], path: "SwiftyCodable", resources: [])
+        .target(name: "SwiftyCodable", dependencies: [], path: "SwiftyCodable")
     ]
 )
